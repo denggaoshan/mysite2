@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!--
+<div id='register'>
+
+<form method='post'>
+{% csrf_token %}
+{{ form.as_table }}
+<input type="submit" value="submit">
+</form>
+
+</div>
+-->
+
+
+<form action="" method="post">
+{% csrf_token %}
+    <ul class="contactList">
+        <li id="id_username" class="contact">Username: {{ form.username }}</li>
+        <li id="id_password1" class="contact">Password:{{ form.password1 }}</li>
+        <li id="id_password2" class="contact">Password Again:{{ form.password2 }}</li>
+        <li id="id_email" class="contact">Email:{{ form.email }}</li>
+    </ul>
+    <input type="submit" value="Submit">
+</form>
+
+</div>
+
+
+{% endblock %}
